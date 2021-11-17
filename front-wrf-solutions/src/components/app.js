@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React, {useEffect} from 'react';
+import { useRoutes } from 'hookrouter';
+import NavBar from './layout/navBar';
+import routes from './layout/routes';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div className='app'>
-        <h1>DevCamp React Starter</h1>
-        <h2>React Redux Router</h2>
-      </div>
-    );
-  }
+
+export default function App() {
+  const routeResult = useRoutes(routes);
+  return (
+    <div className='app'>
+      <h1>WRF Solutions</h1>
+      <NavBar />
+      {routeResult}
+    </div>
+  );
 }
