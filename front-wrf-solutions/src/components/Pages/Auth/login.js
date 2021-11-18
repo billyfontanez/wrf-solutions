@@ -4,7 +4,10 @@ export default function Login() {
     return(
         <div className="login-section">
             <div className='login'>
-                This is the login page
+                <form>
+                    <input type='text' placeholder='Username or Email' name='users_name,users_email' />
+                    <input type='text' placeholder='Password' name='users_password' />
+                </form>
             </div>
         </div>
     )
