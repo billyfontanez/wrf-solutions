@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import SignUpForm from '../../Forms/signUpForm';
 
 export default function SignUp() {
     return(
         <div className="signup-section">
-            <h1>This is the Sign Up page</h1>
+            <SignUpForm />
         </div>
     )
 }
