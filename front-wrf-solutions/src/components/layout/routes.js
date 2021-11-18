@@ -4,7 +4,7 @@ import About from '../Pages/about';
 import Login from '../Pages/Auth/login';
 import SignUp from '../Pages/Auth/signUp'
 import Briefcase from '../Pages/briefcase';
-import Blog from '../Pages/blog';
+import TheReview from '../Pages/theReview';
 import Search from '../Pages/search';
 import Services from '../Pages/services';
 import Contact from '../Pages/contact';
@@ -17,7 +17,7 @@ const routes = {
     '/login': () => <Login />,
     '/sign-up': () => <SignUp />,
     '/briefcase': () => <Briefcase />,
-    '/blog': () => <Blog />,
+    '/the-review': () => <TheReview />,
     '/search': () => <Search />,
     '/services': () => <Services />,
     '/contact': () => <Contact />,

@@ -24,14 +24,14 @@ export default function NavBar() {
                 </div>
 
                 <div className='nav-link'>
-                    <A className='link' href='/signUp'>
+                    <A className='link' href='/sign-up'>
                         SignUp
                     </A>
                 </div>
 
                 <div className='nav-link'>
-                    <A className='link' href='/blog'>
-                        Blog
+                    <A className='link' href='/the-review'>
+                        The Review
                     </A>
                 </div>
 
