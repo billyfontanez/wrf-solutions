@@ -6,11 +6,11 @@ import routes from './layout/routes';
 
 export default function App() {
   const routeResult = useRoutes(routes);
-  return (
-    <div className='app'>
-      <h1>WRF Solutions</h1>
-      <NavBar />
-      {routeResult}
-    </div>
-  );
+    return (
+      <div className='app'>
+        <h1>WRF Solutions</h1>
+        <NavBar />
+        {routeResult}
+      </div>
+    );
 }

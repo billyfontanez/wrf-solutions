@@ -14,15 +14,15 @@ import NoMatch from '../pages/noMatch'
 
 const routes = {
     '/': () => <Home />,
-    '/adout': () => <About/>,
+    '/about': () => <About/>,
     '/login': () => <Login />,
     '/sign-up': () => <SignUp />,
-    '/briecase': () => <Briefcase />,
+    '/briefcase': () => <Briefcase />,
     '/auth': () => <Auth />,
     '/blog': () => <Blog />,
     '/search': () => <Search />,
     '/services': () => <Services />,
-    '/Contact': () => <Contact />,
+    '/contact': () => <Contact />,
     '/no-match': () => <NoMatch />
 
 }

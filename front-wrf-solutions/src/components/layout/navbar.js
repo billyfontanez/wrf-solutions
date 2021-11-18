@@ -28,19 +28,28 @@ export default function NavBar() {
                         Blog
                     </A>
                 </div>
+
                 <div className='nav-link'>
-                    <A className='link' href='/Search'>
-                        search
+                    <A className='link' href='/search'>
+                        Search
                     </A>
                 </div>
+
                 <div className='nav-link'>
                     <A className='link' href='/services'>
                         Services
                     </A>
                 </div>
+
                 <div className='nav-link'>
                     <A className='link' href='/contact'>
                         Contact
+                    </A>
+                </div>
+                
+                <div className='nav-link'>
+                    <A className='link' href='/briefcase'>
+                        Briefcase
                     </A>
                 </div>
             </div>
