@@ -3,8 +3,8 @@ import { A } from 'hookrouter';
 
 export default function NavBar() {
     return (
-        <div className='navigation-container'>
-            <div className='nav-link-wrapper'>
+        <div className='nav-section'>
+            <div className='nav-link-container'>
                 <div className='nav-link'>
                     <A className='link' href='/'>
                         Home
