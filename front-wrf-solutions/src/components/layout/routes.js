@@ -1,15 +1,14 @@
 import React from 'react';
-import Home from '../pages/home';
-import About from '../pages/about';
-import Login from '../pages/login';
-import SignUp from '../pages/signUp'
-import Briefcase from '../pages/briefcase';
-import Auth from '../pages/auth';
-import Blog from '../pages/blog';
-import Search from '../pages/search';
-import Services from '../pages/services';
-import Contact from '../pages/contact';
-import NoMatch from '../pages/noMatch'
+import Home from '../Pages/home';
+import About from '../Pages/about';
+import Login from '../Pages/Auth/login';
+import SignUp from '../Pages/Auth/signUp'
+import Briefcase from '../Pages/briefcase';
+import Blog from '../Pages/blog';
+import Search from '../Pages/search';
+import Services from '../Pages/services';
+import Contact from '../Pages/contact';
+
 
 
 const routes = {
@@ -18,13 +17,10 @@ const routes = {
     '/login': () => <Login />,
     '/sign-up': () => <SignUp />,
     '/briefcase': () => <Briefcase />,
-    '/auth': () => <Auth />,
     '/blog': () => <Blog />,
     '/search': () => <Search />,
     '/services': () => <Services />,
     '/contact': () => <Contact />,
-    '/no-match': () => <NoMatch />
-
 }
 
 export default routes;

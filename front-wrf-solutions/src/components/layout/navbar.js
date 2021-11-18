@@ -24,6 +24,12 @@ export default function NavBar() {
                 </div>
 
                 <div className='nav-link'>
+                    <A className='link' href='/signUp'>
+                        SignUp
+                    </A>
+                </div>
+
+                <div className='nav-link'>
                     <A className='link' href='/blog'>
                         Blog
                     </A>
@@ -46,7 +52,7 @@ export default function NavBar() {
                         Contact
                     </A>
                 </div>
-                
+
                 <div className='nav-link'>
                     <A className='link' href='/briefcase'>
                         Briefcase
