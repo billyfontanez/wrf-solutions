@@ -127,16 +127,17 @@ def add_user_info():
     users_last_name = post_data.get('users_last_name')
     users_birthday = post_data.get('users_birthday')
 
-    #users_birthday = float(users_birthday)
-    #users_birthday = datetime(users_birthday)
-    #users_birthday = users_birthday.strftime('%m/%d/%Y')
-
     new_user_info = Users_Info(users_first_name, users_middle_name, users_last_name, users_birthday)
 
     db.session.add(new_user_info)
     db.session.commit()
 
     return jsonify("User info has been successfully added")
+
+@app.route('/users-info/get', methods=['GET'])
+def get_users_info():
+    users_info = db.session.query(Users_Info).all()
+    return jsonify(multiple_users_info_schema.dump(users_info))
 
 if __name__ == "__main__":
     app.run(debug=True)
