@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import ContactForm from '../Forms/contactForm';
 
 export default function contact() {
