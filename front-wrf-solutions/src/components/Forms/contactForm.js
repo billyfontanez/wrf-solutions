@@ -8,6 +8,7 @@ export default function ContactForm(){
                     <input type='text' placeholder='Name' name='contact_name' />
                     <input type='Email' placeholder='Email' name='contact_email' />
                     <textarea type='textbox' placeholder='Message' name='contact_message' />
+                    <button type='submit'>Submit</button>
                 </form>
             </div>
         </div>
