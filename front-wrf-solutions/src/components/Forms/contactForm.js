@@ -35,7 +35,7 @@ export default function ContactForm() {
                     Cookies.set('contact_form_name',contact_form_name);
                     Cookies.set('contact_form_email',contact_form_email);
                     Cookies.set('contact_form_message',contact_form_message);
-                    navigate('/contact');
+                    navigate('/');
                 }
             })
             .catch(error => {
