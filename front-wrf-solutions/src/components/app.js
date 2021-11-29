@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { useRoutes } from 'hookrouter';
 import NavBar from './Layout/navBar';
 import routes from './Layout/routes';
-import history from './PrivatePages/history';
+//import history from './PrivatePages/history';
 import Header from './Layout/header';
 
 export default function App() {

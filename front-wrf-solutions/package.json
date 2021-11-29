@@ -32,6 +32,8 @@
   },
   "homepage": "https://github.com/bottega-code-school/js-builder",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.6.0",
+    "@stripe/stripe-js": "^1.21.1",
     "ajv": "6.12.0",
     "autoprefixer": "^9.1.0",
     "axios": "0.21.1",
@@ -66,6 +68,7 @@
     "react-router-dom": "5.1.2",
     "redux": "4.0.5",
     "sass-loader": "^7.1.0",
+    "stripe": "^8.191.0",
     "style-loader": "^0.21.0",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11",
