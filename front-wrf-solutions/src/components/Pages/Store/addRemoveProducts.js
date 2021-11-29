@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from 'react';
 import { navigate } from 'hookrouter';
 
-export default function AddProducts(props) {
+export default function AddRemoveProducts(props) {
     const [productsTitle, setProductsTitle] = useState('');
     const [productsImage, setProductsImage] = useState('');
     const [productsDescription, setProductsDescription] = useState('');
@@ -57,7 +57,7 @@ export default function AddProducts(props) {
     },[]);
 
     return (
-        <form className ='add-book-form' onSubmit={handleSubmit}>
+        <form className ='add-remove-products-form' onSubmit={handleSubmit}>
             <div className='input-container'>
                 <div className="add-edit-header">{requestType === 'update' ? <h1>Edit-Products</h1> : <h1>Add-Products</h1>}</div>
                 <input type='text' placeholder='Products Title' name='products_title' onChange={(e) => setProductsTitle(e.target.value)} defaultValue={productsToEdit ? productsToEdit.products_title : ''}/>

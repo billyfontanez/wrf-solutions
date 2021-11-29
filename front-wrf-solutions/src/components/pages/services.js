@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import Products from './Store/products'
-import AddProducts from './Store/addProducts';
+import AddRemoveProducts from './Store/addRemoveProducts';
 
 export default function Services() {
     const [allProducts, setAllProducts] = useState([]);
@@ -28,19 +28,20 @@ export default function Services() {
         setEditMode(false);
         getAllProducts();
     }
-
+    //needs to post in briefcase
     const handleDeleteClick = (products_id) => {
 
-        axios.delete(`http://127.0.0.1:5000/products/delete/${products_id}`)
+        axios.abc(`http://127.0.0.1:5000/products/abc/${products_id}`)
         .then(res => {
             setAllProducts(allProducts.filter(products => {
                 return products.products_id !== products_id;
             }))
         })
         .catch(error => {
-            console.log('An error has occured while trying to delete your product.', error);
+            console.log('An error has occured while trying to move to your briefcase.', error);
         })
     }
+    //
 
     const renderProducts = () => {
         return allProducts.map(products => {
@@ -58,7 +59,7 @@ export default function Services() {
     return (
         <div className="home-page-container">
             <h1 id="home-title">{loggedIn ? Cookies.get('users_name') : ''} All Services</h1>
-            {editMode ? <AddProducts products={productsToEdit} edit={editMode} request={'update'} handleEditSubmit={handleEditSubmit}/> : renderProducts()}
+            {editMode ? <AddRemoveProducts products={productsToEdit} edit={editMode} request={'update'} handleEditSubmit={handleEditSubmit}/> : renderProducts()}
         </div>
     );
 } 
