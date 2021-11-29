@@ -12,12 +12,6 @@ export default function NavBar() {
                 </div>
 
                 <div className='nav-link'>
-                    <A className='link' href='/about'>
-                        About
-                    </A>
-                </div>
-
-                <div className='nav-link'>
                     <A className='link' href='/login'>
                         Login
                     </A>
@@ -30,12 +24,6 @@ export default function NavBar() {
                 </div>
 
                 <div className='nav-link'>
-                    <A className='link' href='/the-review'>
-                        The Review
-                    </A>
-                </div>
-
-                <div className='nav-link'>
                     <A className='link' href='/search'>
                         Search
                     </A>
@@ -44,12 +32,6 @@ export default function NavBar() {
                 <div className='nav-link'>
                     <A className='link' href='/services'>
                         Services
-                    </A>
-                </div>
-
-                <div className='nav-link'>
-                    <A className='link' href='/contact'>
-                        Contact
                     </A>
                 </div>
 

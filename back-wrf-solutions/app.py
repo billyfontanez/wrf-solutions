@@ -139,46 +139,51 @@ def get_users_info():
     users_info = db.session.query(Users_Info).all()
     return jsonify(multiple_users_info_schema.dump(users_info))
 
-class Contact_Form(db.Model):
-    contact_form_id = db.Column(db.Integer, primary_key=True)
-    contact_form_name = db.Column(db.String, unique=False, nullable=False)
-    contact_form_email = db.Column(db.String, unique=False, nullable=False)
-    contact_form_message = db.Column(db.String, unique=False, nullable=False)
+class Products(db.Model):
+    products_id = db.Column(db.Integer, primary_key=True)
+    products_title = db.Column(db.String, unique=False, nullable=False)
+    products_image = db.Column(db.String, unique=False, nullable=False)
+    products_description = db.Column(db.String, unique=False, nullable=False)
+    products_price = db.Column(db.Integer, unique=False, nullable=False)
 
-    def __init__(self, contact_form_name, contact_form_email, contact_form_message):
-        self.contact_form_name = contact_form_name
-        self.contact_form_email = contact_form_email
-        self.contact_form_message = contact_form_message
 
-class Contact_FormSchema(ma.Schema):
+    def __init__(self, products_title, products_image, products_description, products_price):
+        self.products_title = products_title
+        self.products_image = products_image
+        self.products_description = products_description
+        self.products_price = products_price
+
+
+class ProductsSchema(ma.Schema):
     class Meta:
-        fields = ('contact_form_name', 'contact_form_email', 'contact_form_message')
+        fields = ('products_id', 'products_title', 'products_image', 'products_description', 'products_price')
 
-contact_form_schema = Contact_FormSchema()
-multiple_contact_form_schema = Contact_FormSchema(many=True)
+products_schema = ProductsSchema()
+multiple_products_schema = ProductsSchema(many=True)
 
-@app.route('/contact-form/add', methods=['POST'])
-def add_contact_form():
+
+@app.route('/products/add', methods=['POST'])
+def add_products():
     if request.content_type != 'application/json':
         return jsonify('Error: Data must be JSON')
 
     post_data = request.get_json()
-    contact_form_name = post_data.get('contact_form_name')
-    contact_form_email = post_data.get('contact_form_email')
-    contact_form_message = post_data.get('contact_form_message')
+    products_title = post_data.get('products_title')
+    products_image = post_data.get('products_image')
+    products_description = post_data.get('products_description')
+    products_price = post_data.get('products_price')
 
+    new_products = Products(products_title, products_image, products_description, products_price)
 
-    new_contact_form = Contact_Form(contact_form_name, contact_form_email, contact_form_message)
-
-    db.session.add(new_contact_form)
+    db.session.add(new_products)
     db.session.commit()
 
-    return jsonify("Contact form has been added")
+    return jsonify("Product has been successfully added")
 
-@app.route('/contact-form/get', methods=['GET'])
-def get_contact_form():
-    contact_form = db.session.query(Contact_Form).all()
-    return jsonify(multiple_contact_form_schema.dump(contact_form))
+@app.route('/products/get', methods=['GET'])
+def get_products():
+    products = db.session.query(Products).all()
+    return jsonify(multiple_products_schema.dump(products))
 
 if __name__ == "__main__":
     app.run(debug=True)

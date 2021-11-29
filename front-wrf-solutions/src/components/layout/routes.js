@@ -1,13 +1,11 @@
 import React from 'react';
 import Home from '../Pages/home';
-import About from '../Pages/about';
 import Login from '../Pages/Auth/login';
 import SignUp from '../Pages/Auth/signUp'
-import Briefcase from '../Pages/briefcase';
-import TheReview from '../Pages/theReview';
+import Briefcase from '../Pages/Store/briefcase';
 import Search from '../Pages/search';
 import Services from '../Pages/services';
-import Contact from '../Pages/contact';
+
 
 
 
@@ -17,10 +15,9 @@ const routes = {
     '/login': () => <Login />,
     '/sign-up': () => <SignUp />,
     '/briefcase': () => <Briefcase />,
-    '/the-review': () => <TheReview />,
     '/search': () => <Search />,
     '/services': () => <Services />,
-    '/contact': () => <Contact />,
+
 }
 
 export default routes;
