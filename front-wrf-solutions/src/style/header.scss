@@ -1,7 +1,11 @@
-.logo{
+.logo {
     height: 390px;
     width: 100vw;
     background: url(../../static/assets/Logos/WRF3.gif);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .about-me{

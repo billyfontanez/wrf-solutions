@@ -1,0 +1,26 @@
+.headshot-image img{
+    height: 500px;
+    width: auto;
+}
+
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.title {
+    font-size:xx-large
+}
+.about-us-description{
+    font-size: larger;
+}
+
+.headshot-image {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.left-left {
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+}

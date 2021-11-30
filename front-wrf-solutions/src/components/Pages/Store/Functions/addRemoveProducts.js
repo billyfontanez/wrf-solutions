@@ -1,6 +1,5 @@
 import React, { useState , useEffect} from 'react';
 import { navigate } from 'hookrouter';
-
 export default function AddRemoveProducts(props) {
     const [productsTitle, setProductsTitle] = useState('');
     const [productsImage, setProductsImage] = useState('');
