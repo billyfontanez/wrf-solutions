@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import Products from './Store/products'
-import AddRemoveProducts from './Store/addRemoveProducts';
+import AddRemoveProducts from './Store/Functions/addRemoveProducts';
 
 export default function Services() {
     const [allProducts, setAllProducts] = useState([]);
     const [loggedIn, setLoggedIn] = useState(false);
-    const [productsToEdit, setProductsToEdit] = useState({});
-    const [editMode, setEditMode] = useState(false);
+    const [productsToRemove, setProductsToRemove] = useState({});
+    const [editMode, setRemoveMode] = useState(false);
 
     const getAllProducts = () => {
         axios.get('http://127.0.0.1:5000/products/get')
@@ -20,18 +20,18 @@ export default function Services() {
         });
     } 
 
-    const handleEditClick = (products) => {
-        setProductsToEdit(products);
-        setEditMode(true);
+    const handleRemoveClick = (products) => {
+        setProductsToRemove(products);
+        setRemoveMode(true);
     }
-    const handleEditSubmit = () => {
-        setEditMode(false);
+    const handleRemoveSubmit = () => {
+        setRemoveMode(false);
         getAllProducts();
     }
     
-    const handleDeleteClick = (products_id) => {
+    const handleAddClick = (products_id) => {
 
-        axios.abc(`http://127.0.0.1:5000/products/abc/${products_id}`)
+        axios.post(`http://127.0.0.1:5000/users_products/add/${products_id}`)
         .then(res => {
             setAllProducts(allProducts.filter(products => {
                 return products.products_id !== products_id;

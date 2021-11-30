@@ -12,6 +12,8 @@ export default function Products(props) {
 
             <button className="book-btn" onClick={() => props.handleAddClick(products_id)}>Add To Briefcase</button> 
             <button className="book-btn" onClick={() => props.handleRemoveClick(props.products)}>Remove From Briefcase</button>
+            <h1>Test</h1>
         </div>
+
     );
 }
