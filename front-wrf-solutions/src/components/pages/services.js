@@ -28,7 +28,7 @@ export default function Services() {
         setEditMode(false);
         getAllProducts();
     }
-    //needs to post in briefcase
+    
     const handleDeleteClick = (products_id) => {
 
         axios.abc(`http://127.0.0.1:5000/products/abc/${products_id}`)
@@ -41,11 +41,11 @@ export default function Services() {
             console.log('An error has occured while trying to move to your briefcase.', error);
         })
     }
-    //
+    
 
     const renderProducts = () => {
         return allProducts.map(products => {
-            return <Products products={products} handleDeleteClick={handleDeleteClick} handleEditClick={handleEditClick}/>
+            return <Products products={products} handleAddClick={handleAddClick} handleRemoveClick={handleRemoveClick}/>
         })
     }
 

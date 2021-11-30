@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 flask-cors = "*"
-flask = "*"
 flask-bcrypt = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
 flask-sqlalchemy = "*"
+flask = "*"
 
 [dev-packages]
 

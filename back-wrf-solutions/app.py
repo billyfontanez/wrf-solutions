@@ -145,18 +145,20 @@ class Products(db.Model):
     products_image = db.Column(db.String, unique=False, nullable=False)
     products_description = db.Column(db.String, unique=False, nullable=False)
     products_price = db.Column(db.Integer, unique=False, nullable=False)
+    products_category = db.Column(db.String, unique=False, nullable=False)
 
 
-    def __init__(self, products_title, products_image, products_description, products_price):
+    def __init__(self, products_title, products_image, products_description, products_price, products_category ):
         self.products_title = products_title
         self.products_image = products_image
         self.products_description = products_description
         self.products_price = products_price
+        self.products_category = products_category 
 
 
 class ProductsSchema(ma.Schema):
     class Meta:
-        fields = ('products_id', 'products_title', 'products_image', 'products_description', 'products_price')
+        fields = ('products_id', 'products_title', 'products_image', 'products_description', 'products_price', 'products_category ')
 
 products_schema = ProductsSchema()
 multiple_products_schema = ProductsSchema(many=True)
@@ -172,8 +174,9 @@ def add_products():
     products_image = post_data.get('products_image')
     products_description = post_data.get('products_description')
     products_price = post_data.get('products_price')
+    products_category  = post_data.get('products_category')
 
-    new_products = Products(products_title, products_image, products_description, products_price)
+    new_products = Products(products_title, products_image, products_description, products_price, products_category )
 
     db.session.add(new_products)
     db.session.commit()
@@ -184,6 +187,60 @@ def add_products():
 def get_products():
     products = db.session.query(Products).all()
     return jsonify(multiple_products_schema.dump(products))
+
+class Users_Products(db.Model):
+    users_products_id = db.Column(db.Integer, primary_key=True)
+    users_id = db.Column(db.Integer, unique=False, nullable=False)
+    products_id = db.Column(db.Integer, unique=False, nullable=False)
+    products_title = db.Column(db.String, unique=False, nullable=False)
+    products_image = db.Column(db.String, unique=False, nullable=False)
+    products_description = db.Column(db.String, unique=False, nullable=False)
+    products_price = db.Column(db.Integer, unique=False, nullable=False)
+    products_category = db.Column(db.String, unique=False, nullable=False)
+
+
+    def __init__(self, users_id, products_id, products_title, products_image, products_description, products_price, products_category):
+        self.users_id = users_id
+        self.products_title = products_title
+        self.products_image = products_image
+        self.products_description = products_description
+        self.products_price = products_price
+        self.products_category = products_category
+
+
+class Users_ProductsSchema(ma.Schema):
+    class Meta:
+        fields = ('users_products_id', 'users_id', 'products_id', 'products_title', 'products_image', 'products_description', 'products_price, products_category')
+
+users_products_schema = Users_ProductsSchema()
+multiple_users_products_schema = Users_ProductsSchema(many=True)
+
+
+@app.route('/users_products/add', methods=['POST'])
+def add_users_products():
+    if request.content_type != 'application/json':
+        return jsonify('Error: Data must be JSON')
+
+    post_data = request.get_json()
+    users_id = post_data.get('users_id')
+    products_title = post_data.get('products_title')
+    products_image = post_data.get('products_image')
+    products_description = post_data.get('products_description')
+    products_price = post_data.get('products_price')
+    products_category = post_data.get('products_category')
+
+    new_users_products = Users_Products(users_id, products_title, products_image, products_description, products_price, products_category)
+
+    db.session.add(new_users_products)
+    db.session.commit()
+
+    return jsonify("Users product has been successfully added")
+
+@app.route('/users_products/get', methods=['GET'])
+def get_users_products():
+    users_products = db.session.query(Users_Products).all()
+    return jsonify(multiple_users_products_schema.dump(users_products))
+
 
 if __name__ == "__main__":
     app.run(debug=True)

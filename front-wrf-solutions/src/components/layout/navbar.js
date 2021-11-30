@@ -23,12 +23,13 @@ export default function NavBar() {
                     </A>
                 </div>
 
+{/*
                 <div className='nav-link'>
                     <A className='link' href='/search'>
                         Search
                     </A>
                 </div>
-
+*/}
                 <div className='nav-link'>
                     <A className='link' href='/services'>
                         Services
