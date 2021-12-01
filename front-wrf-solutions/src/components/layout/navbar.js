@@ -35,12 +35,13 @@ export default function NavBar() {
                         Services
                     </A>
                 </div>
-
+{/*
                 <div className='nav-link'>
                     <A className='link' href='/briefcase'>
                         Briefcase
                     </A>
                 </div>
+*/}
             </div>
         </div>
     );

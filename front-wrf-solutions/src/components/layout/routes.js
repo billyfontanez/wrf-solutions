@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../Pages/home';
 import Login from '../Pages/Auth/login';
 import SignUp from '../Pages/Auth/signUp'
-import Briefcase from '../Pages/briefcase';
+//import Briefcase from '../Pages/briefcase';
 //import Search from '../Pages/search';
 import Services from '../Pages/services';
 
@@ -14,7 +14,7 @@ const routes = {
     //'/about': () => <About/>,
     '/login': () => <Login />,
     '/sign-up': () => <SignUp />,
-    '/briefcase': () => <Briefcase />,
+    //'/briefcase': () => <Briefcase />,
     //'/search': () => <Search />,
     '/services': () => <Services />,
 

@@ -5,7 +5,6 @@ import routes from './Layout/routes';
 //import history from './PrivatePages/history';
 import Header from './Layout/header';
 import Footer from './Layout/footer';
-import Home from './Pages/home';
 
 export default function App() {
   const routeResult = useRoutes(routes);
@@ -13,8 +12,8 @@ export default function App() {
       <div className='app'>
         <Header />
         <NavBar />
-
         {routeResult || <h1>Page Not Found</h1>}
+        <Footer />
       </div>
     );
 }

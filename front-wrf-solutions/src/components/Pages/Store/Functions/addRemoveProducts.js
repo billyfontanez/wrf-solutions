@@ -1,10 +1,12 @@
 import React, { useState , useEffect} from 'react';
 import { navigate } from 'hookrouter';
+
 export default function AddRemoveProducts(props) {
     const [productsTitle, setProductsTitle] = useState('');
     const [productsImage, setProductsImage] = useState('');
     const [productsDescription, setProductsDescription] = useState('');
     const [productsPrice, setProductsPrice] = useState('');
+    const [productsCategory, setProductsCategory] = useState('');
     const [requestType, setRequestType] = useState(props.request);
     const [request, setRequest] = useState('');
     const [productsToEdit, setProductsToEdit] = useState(props.products);
@@ -23,7 +25,8 @@ export default function AddRemoveProducts(props) {
                 products_title: productsTitle,
                 products_image: productsImage,
                 products_description: productsDescription,
-                products_price: productsPrice
+                products_price: productsPrice,
+                products_category: productsCategory
             })
         })
         .then(res => {
@@ -51,6 +54,7 @@ export default function AddRemoveProducts(props) {
                 setProductsImage(productsToEdit.products_image);
                 setProductsDescription(productsToEdit.products_description);
                 setProductsPrice(productsToEdit.products_price);
+                setProductsCategory(productsToEdit.products_category);
             }
         }
     },[]);
@@ -63,6 +67,7 @@ export default function AddRemoveProducts(props) {
                 <input type='text' placeholder='Products Image' name='products_image' onChange={(e) => setProductsImage(e.target.value)} defaultValue={productsToEdit ? productsToEdit.products_image : ''}/>
                 <input type='text' placeholder='Products Description' name='products_description' onChange={(e) => setProductsDescription(e.target.value)} defaultValue={productsToEdit ? productsToEdit.products_description : ''}/>
                 <input type='text' placeholder='Products Price' name='products_price' onChange={(e) => setProductsPrice(e.target.value)} defaultValue={productsToEdit ? productsToEdit.products_price : ''}/>
+                <input type='text' placeholder='Products Category' name='products_category' onChange={(e) => setProductsCategory(e.target.value)} defaultValue={productsToEdit ? productsToEdit.products_category : ''}/>
             </div>
 
             <button className="submit-btn" type='submit'>Submit</button>
