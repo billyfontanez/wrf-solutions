@@ -52,9 +52,13 @@ export default function LoginForm() {
     return (
         <div className="login-container">
             <form onSubmit={(e) => handleSubmit(e)}>
-                <input type="text" placeholder="Username" value={users_name} name="users_name" onChange={(e) => setUsersName(e.target.value)} />
-                <input type="text" placeholder="Password" value={users_password} name="password" onChange={(e) => setUsersPassword(e.target.value)}/>
-                <button type="submit">Submit</button>
+                <div className='login-form'>
+                    <input className='input-container' type="text" placeholder="Username" value={users_name} name="users_name" onChange={(e) => setUsersName(e.target.value)} />
+                    <input className='input-container' type="text" placeholder="Password" value={users_password} name="password" onChange={(e) => setUsersPassword(e.target.value)}/>
+                </div>
+                <div className='button-container'>
+                    <button className='btn' type="submit">Submit</button>
+                </div>
             </form>
             <h6 style={{visibility: error ? 'visible' : 'hidden'}}>{errorMessage}</h6>
         </div>

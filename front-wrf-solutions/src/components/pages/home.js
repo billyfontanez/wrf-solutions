@@ -36,10 +36,6 @@ export default function Home() {
                     <img src={headshot} alt='William Fontanez headshot' />; 
                 </div>
             </div>
-            <div>
-                Some of my work
-            </div>
-
         </div>
     )
 }
