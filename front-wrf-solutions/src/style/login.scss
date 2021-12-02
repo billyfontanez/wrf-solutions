@@ -1,11 +1,14 @@
 .login-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;
+    background-image: url(../../static/assets/Images/login-trans-1660x450px.png);
+    height: 450px;
+    width: 1600px;
 }
 
 .login-img img{
-    height: 800px;
-    width: auto;
+    //height: 800px;
+    //width: auto;
 
 }
 
@@ -17,4 +20,19 @@
     display : flex;
     justify-content : center;
     align-items : center;
+    padding-top: 100px;
 }
+
+input{
+    width: 219px;
+    height: 3em;
+    font-size: 15px;
+}
+
+form{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius:6px;
+}
+

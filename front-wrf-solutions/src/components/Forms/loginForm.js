@@ -57,7 +57,7 @@ export default function LoginForm() {
                     <input className='input-container' type="text" placeholder="Password" value={users_password} name="password" onChange={(e) => setUsersPassword(e.target.value)}/>
                 </div>
                 <div className='button-container'>
-                    <button className='btn' type="submit">Submit</button>
+                    <button className='btn' type="submit"><h2>Submit</h2></button>
                 </div>
             </form>
             <h6 style={{visibility: error ? 'visible' : 'hidden'}}>{errorMessage}</h6>
