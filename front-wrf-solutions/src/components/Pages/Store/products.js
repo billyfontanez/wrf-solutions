@@ -12,8 +12,8 @@ export default function Products(props) {
             <div className='price'>${products_price}</div>
             <div className='category'>{products_category}</div>
             <div className='product-buttons'>
-                <button className="product-add-btn button" onClick={() => props.handleAddClick(products_id)}>Add To Briefcase</button> 
-                <button className="book-remove-btn button" onClick={() => props.handleRemoveClick(props.products)}>Remove From Briefcase</button>
+                <button className="product-add-btn button" onClick={() =>(products_id)}>Add To Briefcase</button> 
+                <button className="book-remove-btn button" onClick={() =>(props.products)}>Remove From Briefcase</button>
             </div>
         </div>
     );

@@ -1,0 +1,32 @@
+.sign-up-form-container {
+    background-image: url(../../static/assets/Images/signup-600-400.png);
+    width:1600px;
+    height:450px;
+}
+
+.sign-up-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-form-container input {
+    width: 300px;
+}
+
+.sign-up-form-container form{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sign-up-form-container input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.submit-btn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1215px;
+}

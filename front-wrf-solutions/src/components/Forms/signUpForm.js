@@ -98,19 +98,21 @@ export default function SignUpForm() {
         <div className="sign-up-form-section">
             <div className='sign-up-form-container'>
                 <form onSubmit={(e) => handleSubmit(e)}>
-                    <div className='part-one'>
+                    <div> 
                         <input type='text' placeholder='First Name' name='users_first_name' onChange={(e) => setUsersFirstName(e.target.value)}/>
                         <input type='text' placeholder='Middle Name' name='users_middle_name' onChange={(e) => setUsersMiddleName(e.target.value)}/>
                         <input type='text' placeholder='Last Name' name='users_last_name' onChange={(e) => setUsersLastName(e.target.value)}/>
                         <input type='date' placeholder='Birthday' name='users_birthday' onChange={(e) => setUsersBirthday(e.target.value)}/>
                     </div>
                     <div>
-                        <input type='eamil' placeholder='Email' name='users_email' onChange={(e) => setUsersEmail(e.target.value)}/>
+                        <input type='eamil' placeholder='Email' name='users_email' onChange={(e) => setUsersEmail(e.target.value)}/>                 
                         <input type='text' placeholder='Username' name='users_name' onChange={(e) => setUsersName(e.target.value)}/>
                         <input type='text' placeholder='Password' name='users_password' onChange={(e) => setUsersPassword(e.target.value)}/>
                         <input type="text" placeholder="Confirm Password" value={confirmPassword} name="confirmPassword" onChange={(e) => setConfirmPassword(e.target.value)}/>
                     </div>
-                    <button className='submit-btn' type='submit'>Submit</button>
+                    <div className='submit-btn'>
+                        <button className='btn' type='submit'><h1>Submit</h1></button>
+                    </div>
                 </form>
                 <h6 style={{visibility: error ? 'visible' : 'hidden'}}>{errorMessage}</h6>
             </div>

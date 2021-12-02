@@ -3,8 +3,10 @@ import SignUpForm from '../../Forms/signUpForm';
 
 export default function SignUp(){
     return(
-        <div>
-            <SignUpForm />
+        <div className='sign-up-container'>
+            <div className='sign-up-form'>
+                <SignUpForm />
+            </div>
         </div>
     )
 }

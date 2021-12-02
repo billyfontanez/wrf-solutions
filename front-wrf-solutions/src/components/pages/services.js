@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import Products from './Store/products'
-import AddRemoveProducts from './Store/Functions/addRemoveProducts';
 
 export default function Services() {
     const [allProducts, setAllProducts] = useState([]);
