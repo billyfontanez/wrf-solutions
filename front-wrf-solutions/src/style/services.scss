@@ -1,0 +1,57 @@
+#services-title{
+    font-size: 50px;
+}
+
+#services-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-container{
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.product-buttons{
+    padding : 5px;
+
+}
+
+.button{
+    margin: 5px;
+}
+
+.all-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.all-products{
+    background-image: url(../../static/assets/Images/shopping-1600-450.png);
+}
+
+.product-title{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+}

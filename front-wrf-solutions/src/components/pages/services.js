@@ -57,9 +57,13 @@ export default function Services() {
     },[]);
 
     return (
-        <div className="home-page-container">
-            <h1 id="home-title">{loggedIn ? Cookies.get('users_name') : ''} All Services</h1>
-            {editMode ? <AddRemoveProducts products={productsToEdit} edit={editMode} request={'update'} handleEditSubmit={handleEditSubmit}/> : renderProducts()}
+        <div className="services-page-container">
+            <div>
+                <h1 id="services-title">{loggedIn ? Cookies.get('users_name') : ''} All Services</h1>
+            </div>
+            <div className='all-products'>
+                {editMode ? <AddRemoveProducts products={productsToEdit} edit={editMode} request={'update'} handleEditSubmit={handleEditSubmit}/> : renderProducts()}
+            </div>
         </div>
     );
 } 
