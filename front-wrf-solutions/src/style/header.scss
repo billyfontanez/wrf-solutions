@@ -1,11 +1,18 @@
 .logo {
-    height: 390px;
+    height: 240px;
     width: 100vw;
-    background: url(../../static/assets/Logos/WRF3.gif);
+    background: rgb(2, 2, 2);
+    //background-image: url(../../static/assets/Logos/WRF3-240x240.gif);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-me{
