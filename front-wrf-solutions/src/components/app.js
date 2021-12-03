@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { useRoutes } from 'hookrouter';
-import NavBar from './Layout/navBar';
+import NavBar from './Layout/navbar';
 import routes from './Layout/routes';
 //import history from './PrivatePages/history';
 import Header from './Layout/header';

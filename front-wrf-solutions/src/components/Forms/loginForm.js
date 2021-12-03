@@ -14,7 +14,7 @@ export default function LoginForm() {
             setError(true);
             setErrorMessage('Error: All fields must be filled in!');
         } else {
-            fetch('http://127.0.0.1:5000/user/verify', {
+            fetch('postgresql://sxirmnwztxyerk:37a222f1240fa7b938db0d42643216dfed5ceaf121c019fbd1b2929790db7912@ec2-3-220-240-189.compute-1.amazonaws.com:5432/d3s6d7m46m135k/user/verify', {
                 method: "POST",
                 headers: {"content-type" : "application/json"},
                 body: JSON.stringify({
