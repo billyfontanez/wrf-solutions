@@ -9,6 +9,7 @@
         top:50vh;
         left:50vh;
         transform: translate(-50%,-50%);
+        padding-top: 90vh;
     }
 
 
@@ -141,11 +142,11 @@
     }
 
     .btn{
-        width: 66vw;
+        width: 59vw;
     }
 
     .login-container form{
-        padding-right: 70px;
+        padding-right: 85vw;
         padding-top: 175px;
     }
 
@@ -160,6 +161,7 @@
         transform: translate(-50%,-75%);
         padding-left: 10px;
         max-width: 100vw;
+        padding-top: 90vh;
 
         .sign-up-input{
             display: flex;

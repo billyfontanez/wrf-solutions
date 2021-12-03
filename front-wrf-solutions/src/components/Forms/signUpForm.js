@@ -24,7 +24,7 @@ export default function SignUpForm() {
             setError(true);
             setErrorMessage('Error: The passwords are not the same. ');
         } else {
-            fetch('https://wrf-solutions-frontend.herokuapp.com//user/add', {
+            fetch('https://wrf-solutions-backend.herokuapp.com/user/add', {
                 method: "POST",
                 headers: {"content-type" : "application/json"},
                 body: JSON.stringify({
@@ -55,7 +55,7 @@ export default function SignUpForm() {
             })
         }
 
-        fetch('https://wrf-solutions-frontend.herokuapp.com/users-info/add', {
+        fetch('https://wrf-solutions-backend.herokuapp.com/users-info/add', {
             method: "POST",
             headers: {"content-type" : "application/json"},
             body: JSON.stringify({
