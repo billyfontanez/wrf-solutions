@@ -60,7 +60,7 @@ def add_user():
 
     return jsonify("User has been successfully added")
 
-@app.route('/user/verify', methods=['GET'])
+@app.route('/user/verify', methods=['POST'])
 def verify_user():
     if request.content_type != 'application/json':
         return jsonify('Error: Data must be JSON')

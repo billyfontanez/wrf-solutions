@@ -15,7 +15,7 @@ export default function LoginForm() {
             setErrorMessage('Error: All fields must be filled in!');
         } else {
             fetch('https://wrf-solutions-backend.herokuapp.com/user/verify', {
-                method: "GET",
+                method: "POST",
                 headers: {"content-type" : "application/json"},
                 body: JSON.stringify({
                     users_name,

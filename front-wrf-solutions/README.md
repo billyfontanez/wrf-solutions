@@ -1,5 +1,1 @@
-# React/Redux/Router Starter Project
-
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
-
-*Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*
+This application is an E-Commerce Microserver. The niche that it will be used for are individuals that need help with business operations and application development. Right now, individuals can create an account and log in with this information. The features that will be added to this project next are a blog page and having the services displayed in a briefcase/shopping cart.
