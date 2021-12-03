@@ -1,8 +1,11 @@
 .logo {
-    height: 240px;
+    height: 35vh;
     width: 100vw;
     background: rgb(2, 2, 2);
-    //background-image: url(../../static/assets/Logos/WRF3-240x240.gif);
+    position: absolute;
+}
+
+.logo img {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

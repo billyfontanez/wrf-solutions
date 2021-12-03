@@ -50,6 +50,14 @@
 }
 .all-products{
     background-image: url(../../static/assets/Images/shopping-1600-450.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 62.5vh;
+    left:50vw;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 56vh;
 }
 
 .product-title{

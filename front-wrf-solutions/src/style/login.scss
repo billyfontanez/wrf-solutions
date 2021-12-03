@@ -1,20 +1,23 @@
 .login-section{
-    //display: grid;
-    //grid-template-columns: 1fr 1fr;
     background-image: url(../../static/assets/Images/login-trans-1660x450px.png);
-    height: 450px;
-    width: 1600px;
+    height: 115vh;
+    width: 100%;
+    background-size: cover;
 }
 
 .btn{
     width: 445px;
 }
 
-.login-form {
-    display : flex;
+.login-form form {
     justify-content : center;
     align-items : center;
-    padding-top: 100px;
+
+    position: absolute;
+    top: 60vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+
 }
 
 input{
@@ -29,4 +32,5 @@ form{
     -khtml-border-radius: 6px;
     border-radius:6px;
 }
+
 

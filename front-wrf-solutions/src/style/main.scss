@@ -22,19 +22,29 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-.app {
-    margin-top: 0px;
-    display: grid;
-    justify-items: center;
+.app-wrapper{
+    height:100vh;
+    width: 100vw;
 }
 
-@import './navBar.scss';
-@import './header.scss';
+.app {
+    margin: 0px;
+    height:100vh;
+    width: 100%;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@import './mixins.scss';
 @import './home.scss';
 @import './login.scss';
-@import './mixins.scss';
-@import './button.scss';
-@import './footer.scss';
-@import './services.scss';
 @import './signup';
-@import './media-quiery.scss'
+@import './services.scss';
+@import './navBar.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './button.scss';
+@import './media-quiery.scss';

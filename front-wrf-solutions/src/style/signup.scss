@@ -1,13 +1,18 @@
-.sign-up-form-container {
-    background-image: url(../../static/assets/Images/signup-600-400.png);
-    width:1600px;
-    height:450px;
+.sign-up-container {
+    background-image: url(../../static/assets/Images/sign-up-1600-450.png);
+    overflow: hidden;
+    height: 55vh;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 35vh;
 }
 
 .sign-up-form-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 130px;
 }
 
 .sign-up-form-container input {

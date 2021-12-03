@@ -8,6 +8,7 @@ import Footer from './Layout/footer';
 
 export default function App() {
   const routeResult = useRoutes(routes);
+  
     return (
       <div className='app'>
         <Header />
