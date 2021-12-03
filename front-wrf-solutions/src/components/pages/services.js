@@ -10,7 +10,7 @@ export default function Services() {
     const [editMode, setRemoveMode] = useState(false);
 
     const getAllProducts = () => {
-        axios.get('http://127.0.0.1:5000/products/get')
+        axios.get('https://wrf-solutions-frontend.herokuapp.com/products/get')
         .then(res => {
             setAllProducts(res.data)
         })
@@ -30,7 +30,7 @@ export default function Services() {
     
     const handleAddClick = (products_id) => {
 
-        axios.post(`http://127.0.0.1:5000/users_products/add/${products_id}`)
+        axios.post(`https://wrf-solutions-frontend.herokuapp.com//users_products/add/${products_id}`)
         .then(res => {
             setAllProducts(allProducts.filter(products => {
                 return products.products_id !== products_id;
