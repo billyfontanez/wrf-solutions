@@ -9,7 +9,7 @@ import os
 
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://sxirmnwztxyerk:37a222f1240fa7b938db0d42643216dfed5ceaf121c019fbd1b2929790db7912@ec2-3-220-240-189.compute-1.amazonaws.com:5432/d3s6d7m46m135k"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://kvocockwfwiwog:bf92625695b69e710361d57e72ea82b5a1474f977b2993973d8834f8edd4f2d0@ec2-34-204-128-77.compute-1.amazonaws.com:5432/d7fae4lafpt94a"
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 CORS(app)
@@ -60,7 +60,7 @@ def add_user():
 
     return jsonify("User has been successfully added")
 
-@app.route('/user/verify', methods=['POST'])
+@app.route('/user/verify', methods=['GET'])
 def verify_user():
     if request.content_type != 'application/json':
         return jsonify('Error: Data must be JSON')
